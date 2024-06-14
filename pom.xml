@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tfm</groupId>
-	<artifactId>Miembros</artifactId>
+	<artifactId>ms-miembros</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Miembros</name>
+	<name>ms-miembros</name>
 	<description>Microservicio para gestionar los miembros</description>
 	<properties>
 		<java.version>17</java.version>

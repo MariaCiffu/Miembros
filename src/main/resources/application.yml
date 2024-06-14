@@ -1,12 +1,12 @@
 ## Configuracion de Spring
 spring:
   application:
-    name: miembros
+    name: ms-miembros
   datasource:
     url: ${DB_URL:jdbc:mysql://localhost:3306/itataki_manager_db} #Actualizar con el valor de tu despliegue local de MySQL.
     driver-class-name: ${DB_DRIVER:com.mysql.cj.jdbc.Driver}
     username: ${DB_USER:root} #Actualizar con el valor de tu usuario.
-    password: ${DB_PASSWORD:rootmaster} #Actualizar con el valor de tu contraseña de root.
+    password: ${DB_PASSWORD:rootmaster} #Actualizar con el valor de tu contraseï¿½a de root.
   jpa:
     show-sql: true
     hibernate:
@@ -29,5 +29,5 @@ eureka:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
-    hostname: miembros
+    hostname: ms-miembros
 
