@@ -10,6 +10,12 @@ public class MiembrosApplication {
 
 		String profile = System.getenv("PROFILE");
 		System.setProperty("spring.profiles.active", profile != null ? profile : "default");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		SpringApplication.run(MiembrosApplication.class, args);
 	}
 
