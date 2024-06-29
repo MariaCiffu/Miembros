@@ -37,3 +37,10 @@ eureka:
     preferIpAddress: true
     hostname: ${HOSTNAME:localhost}
 
+
+logging:
+  level:
+    root: INFO
+    com.tfm.Miembros: DEBUG
+
+
