@@ -3,10 +3,10 @@ spring:
   application:
     name: ms-miembros
   datasource:
-    url: ${MYSQL_PRIVATE_URL:jdbc:mysql://localhost:3306/itataki_manager_db} #Actualizar con el valor de tu despliegue local de MySQL.
+    url: ${DB_URL:jdbc:mysql://localhost:3306/itataki_manager_db} #Actualizar con el valor de tu despliegue local de MySQL.
     driver-class-name: ${DB_DRIVER:com.mysql.cj.jdbc.Driver}
-    username: ${MYSQLUSER:root} #Actualizar con el valor de tu usuario.
-    password: ${MYSQLPASSWORD:rootmaster} #Actualizar con el valor de tu contrase�a de root.
+    username: ${DB_USER:root} #Actualizar con el valor de tu usuario.
+    password: ${DB_PASSWORD:rootmaster} #Actualizar con el valor de tu contrase�a de root.
   jpa:
     show-sql: true
     hibernate:
@@ -14,6 +14,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
   h2:
     console:
       enabled: true
