@@ -5,11 +5,13 @@ FROM maven:3.8.5-openjdk-17 AS build
 ARG DB_URL
 ARG DB_USER
 ARG DB_PASSWORD
+ARG PROFILE
 
 # Usar las variables durante la construcción
 RUN echo "Database URL: $DB_URL"
 RUN echo "Database User: $DB_USER"
 RUN echo "Database Password: $DB_PASSWORD"
+RUN echo "Profile use: $PROFILE"
 
 COPY . .
 RUN mvn clean package
@@ -22,6 +24,7 @@ EXPOSE 8088
 ENV DB_URL=${DB_URL}
 ENV DB_USER=${DB_USER}
 ENV DB_PASSWORD=${DB_PASSWORD}
+ENV PROFILE=${PROFILE}
 
 COPY --from=build /target/ms-miembros-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
