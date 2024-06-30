@@ -7,6 +7,7 @@ ARG DB_USER
 ARG DB_PASSWORD
 ARG PROFILE
 ARG HOSTNAME
+ARG PORT
 
 # Usar las variables durante la construcción
 RUN echo "Database URL: $DB_URL"
@@ -14,6 +15,7 @@ RUN echo "Database User: $DB_USER"
 RUN echo "Database Password: $DB_PASSWORD"
 RUN echo "Profile use: $PROFILE"
 RUN echo "Hostname: $HOSTNAME"
+RUN echo "Port: $PORT"
 
 COPY . .
 RUN mvn clean package
@@ -28,6 +30,7 @@ ENV DB_USER=${DB_USER}
 ENV DB_PASSWORD=${DB_PASSWORD}
 ENV PROFILE=${PROFILE}
 ENV HOSTNAME=${HOSTNAME}
+ENV HOSTNAME=${PORT}
 
 COPY --from=build /target/ms-miembros-0.0.1-SNAPSHOT.jar app.jar
 
