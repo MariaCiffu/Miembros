@@ -30,4 +30,6 @@ ENV PROFILE=${PROFILE}
 ENV HOSTNAME=${HOSTNAME}
 
 COPY --from=build /target/ms-miembros-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+
+# Establecer el perfil activo durante la ejecución
+ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILE}", "-jar", "/app.jar"]
