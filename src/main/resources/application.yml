@@ -38,9 +38,4 @@ eureka:
     hostname: ${HOSTNAME:localhost}
 
 
-logging:
-  level:
-    root: DEBUG
-    com.tfm.Miembros: DEBUG
-
 
