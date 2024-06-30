@@ -63,8 +63,8 @@ public class MiembrosServiceImpl implements MiembrosService {
         //Otra opcion: Jakarta Validation: https://www.baeldung.com/java-validation
         if (request != null && StringUtils.hasLength(request.getNombre().trim())
                 && StringUtils.hasLength(request.getApellido().trim())
-                && StringUtils.hasLength(request.getCargo().trim()) && StringUtils.hasLength(request.getTfno().trim()) &&
-                StringUtils.hasLength(request.getMail().trim())) {
+                && StringUtils.hasLength(request.getCargo().trim()) && StringUtils.hasLength(request.getTfno().trim())
+        ) {
 
             Miembro miembro = Miembro.builder().nombre(request.getNombre()).apellido(request.getApellido())
                     .cargo(request.getCargo()).tfno(request.getTfno())
