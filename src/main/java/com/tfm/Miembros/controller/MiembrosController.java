@@ -24,7 +24,7 @@ import java.util.Map;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-@Tag(name = "Miembros Controller", description = "Microservicio encargado de exponer operaciones CRUD sobre productos alojados en una base de datos en memoria.")
+@Tag(name = "Miembros Controller", description = "Microservicio encargado de exponer operaciones CRUD sobre miembros alojados en una base de datos en memoria.")
 public class MiembrosController {
     private final MiembrosService service;
 
