@@ -29,8 +29,12 @@ server:
 ## Configuracion del cliente de Eureka
 eureka:
   client:
+    fetch-registry: false
+    register-with-eureka: false
+    healthcheck:
+      enabled: false
     metrics:
-      enabled: false  # Desactiva completamente las métricas problemáticas
+      enabled: false  # Desactiva métricas problemáticas
     service-url:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:

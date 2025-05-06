@@ -31,6 +31,11 @@
 					<artifactId>eureka-client</artifactId>
 				</exclusion>
 				<exclusion>
+					<groupId>com.netflix.ribbon</groupId>
+					<artifactId>ribbon-eureka</artifactId>
+				</exclusion>
+				<!-- Añade estas exclusiones adicionales -->
+				<exclusion>
 					<groupId>com.netflix.servo</groupId>
 					<artifactId>servo-core</artifactId>
 				</exclusion>
@@ -40,6 +45,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<dependency>
 			<groupId>com.netflix.eureka</groupId>
 			<artifactId>eureka-client</artifactId>
@@ -48,6 +54,10 @@
 				<exclusion>
 					<groupId>com.netflix.servo</groupId>
 					<artifactId>servo-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.netflix.archaius</groupId>
+					<artifactId>archaius-core</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
