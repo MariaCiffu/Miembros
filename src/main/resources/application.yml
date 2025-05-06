@@ -29,6 +29,8 @@ server:
 ## Configuracion del cliente de Eureka
 eureka:
   client:
+    metrics:
+      enabled: false  # Desactiva completamente las métricas problemáticas
     service-url:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
